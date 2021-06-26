@@ -71,20 +71,19 @@ let letterPointsNew = 0;
 	return letterPointsNew;
 
 };
-// Array for all 3 objects
- const scoringAlgorithms = [{
-  name: "Simple Score",
+
+let objSimpleScore = {name: "Simple Score",
   description: "Each letter is worth 1 point.",
-  scoreFunction: simpleScore
-},{
-  name: "Bonus Vowels",
+  scoreFunction: simpleScore};
+
+let objBonusVowels = {  name: "Bonus Vowels",
   description: "Vowels are 3 pts, consonants are 1 pt.",
-  scoreFunction: vowelBonusScore
-},{
-  name: "Scrabble",
+  scoreFunction: vowelBonusScore};
+let objScrabble = {  name: "Scrabble",
   description: "The traditional scoring algorithm.",
-  scoreFunction: scrabbleScore  
-}];
+  scoreFunction: scrabbleScore};
+// Array for all 3 objects
+ const scoringAlgorithms = [objSimpleScore,objBonusVowels,objScrabble];
 
 let scorer = 0 ;
  function scorerPrompt (num) {
@@ -110,7 +109,7 @@ Enter 0, 1, or 2:\n`);
       newPointStructure[letter.toLowerCase()] = Number(letterValue);
     }
   }
-  // newPointStructure[' '] = 0;
+  // newPointStructure[' '] = 0; did not accepted bonus :( 
   return newPointStructure;
 }
  
