@@ -72,23 +72,13 @@ let letterPointsNew = 0;
 
 };
 
-let objSimpleScore = {
-  name: "Simple Score",
-  description: "Each letter is worth 1 point.",
-  scoreFunction: simpleScore
-  };
+let objSimpleScore = {name: "Simple Score", description: "Each letter is worth 1 point.", scoreFunction: simpleScore};
 
-let objBonusVowels = {
-  name: "Bonus Vowels",
+let objBonusVowels = {name: "Bonus Vowels",
   description: "Vowels are 3 pts, consonants are 1 pt.",
-  scoreFunction: vowelBonusScore
-  };
+  scoreFunction: vowelBonusScore  };
 
-let objScrabble = {
-  name: "Scrabble",
-  description: "The traditional scoring algorithm.",
-  scoreFunction: scrabbleScore
-  };
+let objScrabble = {name: "Scrabble", description: "The traditional scoring algorithm.", scoreFunction: scrabbleScore};
 // Array for all 3 objects
  const scoringAlgorithms = [objSimpleScore,objBonusVowels,objScrabble];
 
