@@ -107,7 +107,7 @@ Enter 0, 1, or 2:\n`);
   const newPointStructure = {};
   for (const [letterValue, letterArr] of Object.entries(obj)) {
     for (const letter of letterArr) {
-      newPointStructure[letter.toLowerCase()] = letterValue;
+      newPointStructure[letter.toLowerCase()] = Number(letterValue);
     }
   }
   newPointStructure[' '] = 0;
