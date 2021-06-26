@@ -80,7 +80,7 @@ let objBonusVowels = {name: "Bonus Vowels",
 
 let objScrabble = {name: "Scrabble", description: "The traditional scoring algorithm.", scoreFunction: scrabbleScore};
 // Array for all 3 objects
- const scoringAlgorithms = [objSimpleScore,objBonusVowels,objScrabble];
+ const scoringAlgorithms = [objSimpleScore, objBonusVowels, objScrabble];
 
 let scorer = 0 ;
  function scorerPrompt (num) {
