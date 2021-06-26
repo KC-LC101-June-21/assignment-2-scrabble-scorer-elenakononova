@@ -73,7 +73,7 @@ let letterPointsNew = 0;
 };
 // Array for all 3 objects
  const scoringAlgorithms = [{
-  name: "Simple Score	",
+  name: "Simple Score",
   description: "Each letter is worth 1 point.",
   scoreFunction: simpleScore
 },{
