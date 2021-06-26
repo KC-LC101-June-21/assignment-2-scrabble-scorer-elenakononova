@@ -110,7 +110,7 @@ Enter 0, 1, or 2:\n`);
       newPointStructure[letter.toLowerCase()] = Number(letterValue);
     }
   }
-  newPointStructure[' '] = 0;
+  // newPointStructure[' '] = 0;
   return newPointStructure;
 }
  
