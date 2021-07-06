@@ -80,9 +80,11 @@ let objBonusVowels = {name: "Bonus Vowels",
 
 let objScrabble = {name: "Scrabble", description: "The traditional scoring algorithm.", scoreFunction: scrabbleScore};
 // Array for all 3 objects
- const scoringAlgorithms = [{name: "Simple Score", description: "Each letter is worth 1 point.", scoringFunction: simpleScore }, {name: "Bonus Vowels",
+ let scoringAlgorithms = [objSimpleScore,objBonusVowels,objScrabble
+   /*{name: "Simple Score", description: "Each letter is worth 1 point.", scoringFunction: simpleScore }, {name: "Bonus Vowels",
   description: "Vowels are 3 pts, consonants are 1 pt.",
-  scoringFunction: vowelBonusScore }, {name: "Scrabble", description: "The traditional scoring algorithm.", scoringFunction: scrabbleScore }];
+  scoringFunction: vowelBonusScore }, {name: "Scrabble", description: "The traditional scoring algorithm.", scoringFunction: scrabbleScore }
+  */];
 
 let scorer = 0 ;
  function scorerPrompt (num) {
@@ -94,7 +96,7 @@ Enter 0, 1, or 2:\n `));
     while (scorer < 0 || scorer > 2 || isNaN(scorer)) {
     scorer = input.question(`Invalid entry.PLease enter which scoring algorithm would you like to use? \n`);   
     }
-   return scorer
+   return Number(scorer)
 };
 
  function transform(obj){
