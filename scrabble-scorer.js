@@ -72,17 +72,18 @@ let letterPointsNew = 0;
 
 };
 
- let objSimpleScore = {name: "Simple Score", description: "Each letter is worth 1 point.", scoreFunction: simpleScore};
+// let objSimpleScore = {name: "Simple Score", description: "Each letter is worth 1 point.", scoreFunction: simpleScore};
 
-let objBonusVowels = {name: "Bonus Vowels", description: "Vowels are 3 pts, consonants are 1 pt.", scoreFunction: vowelBonusScore};
+//let objBonusVowels = {name: "Bonus Vowels", description: "Vowels are 3 pts, consonants are 1 pt.", scoreFunction: vowelBonusScore};
 
-let objScrabble = {name: "Scrabble", description: "The traditional scoring algorithm.", scoreFunction: scrabbleScore};
+// let objScrabble = {name: "Scrabble", description: "The traditional scoring algorithm.", scoreFunction: scrabbleScore};
 // Array for all 3 objects
- let scoringAlgorithms = [objSimpleScore,objBonusVowels,objScrabble
- /* {name: "Simple Score", description: "Each letter is worth 1 point.", scoringFunction: simpleScore },{name: "Bonus Vowels",
+ let scoringAlgorithms = [
+   //objSimpleScore,objBonusVowels,objScrabble
+  {name: "Simple Score", description: "Each letter is worth 1 point.", scoringFunction: simpleScore },{name: "Bonus Vowels",
   description: "Vowels are 3 pts, consonants are 1 pt.",
   scoringFunction: vowelBonusScore }, {name: "Scrabble", description: "The traditional scoring algorithm.", scoringFunction: scrabbleScore}
-  */];
+  ];
 
 let scorer = 0 ;
  function scorerPrompt (num) {
@@ -120,7 +121,7 @@ newPointStructure = transform(oldPointStructure);
 function runProgram() {
      initialPrompt();
       scorerPrompt(); 
-console.log(`Score for the '${enteredWord}' is: ${scoringAlgorithms[scorer].scoreFunction(enteredWord)}`);   
+console.log(`Score for the '${enteredWord}' is: ${scoringAlgorithms[scorer].scoringFunction(enteredWord)}`);   
 }
 
 // Don't write any code below this line //
